@@ -1,10 +1,9 @@
 class SecretsController < ApplicationController
-  before_action :require_log
+  before_action :require_logged_in
+
   def show
-    redirect_to controller: 'sessions', action: 'new' unless logged_in?
   end
   
- 
 end
 
 
